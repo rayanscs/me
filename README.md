@@ -1,2 +1,2 @@
 # me
-Projeto de conhecimentos
+Projeto de desafio https://github.com/mercadoeletronico/backend-challenge
