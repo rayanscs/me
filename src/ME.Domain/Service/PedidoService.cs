@@ -14,15 +14,18 @@ namespace ME.Domain.Service
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IValidacaoService _validacaoService;
         private readonly IStatusPedidoService _statusPedidoService;
+        private readonly IUnitOfWork _uow;
 
         public PedidoService(IPedidoRepository pedidoRepository,
                              IValidacaoService validacaoService,
-                             IStatusPedidoService statusPedidoService
+                             IStatusPedidoService statusPedidoService,
+                             IUnitOfWork uow
             )
         {
             _pedidoRepository = pedidoRepository;
             _validacaoService = validacaoService;
             _statusPedidoService = statusPedidoService;
+            _uow = uow;
         }
 
         public IResponse StatusPedido(ParametroMudancaStatusPedido parametroMudancaStatusPedido)
@@ -43,7 +46,7 @@ namespace ME.Domain.Service
             #endregion
 
             #region Obter informações pedido
-            var result = _pedidoRepository.ObterPedido(Convert.ToInt32(parametroMudancaStatusPedido.PedidoId));
+            var result = _uow.PedidoRepository.ObterPedido(Convert.ToInt32(parametroMudancaStatusPedido.PedidoId));
             if (!result.Sucesso)
             {
                 response.AddNotifications(result.Notifications);
@@ -60,11 +63,12 @@ namespace ME.Domain.Service
 
         public IResponse ObterPedido(int pedidoId)
         {
-            var result = _pedidoRepository.ObterPedido(pedidoId);
+            var result = _uow.PedidoRepository.ObterPedido(pedidoId);
             return result;
         }
 
-        public RetornoMudancaStatusPedido DefineResultadoMudancaStatus(ParametroMudancaStatusPedido parametroMudancaStatusPedido, RetornoMudancaStatusPedido retornoPedido, 
+        public RetornoMudancaStatusPedido DefineResultadoMudancaStatus(ParametroMudancaStatusPedido parametroMudancaStatusPedido, 
+                                                                       RetornoMudancaStatusPedido retornoPedido, 
                                                                        List<Item> itensPedido)
         {
             if (!itensPedido.Any())

@@ -25,7 +25,6 @@ namespace ME.Infrasctructure.UoW
                 DbConnection = _dbConfig.SqlServerConnection;
                 return new PedidoRepository(_dbConfig.SqlServerConnection);
             }
-           
         }
 
         public void BeginTransaction()

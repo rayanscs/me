@@ -16,7 +16,7 @@ namespace ME.IoC
         {
             services.AddTransient<IResponse, Response>();
             services.AddScoped<IValidacaoService, ValidacaoService>();
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
             services.AddScoped<IStatusPedidoService, StatusPedidoService>();
             services.AddScoped<IPedidoService, PedidoService>();
