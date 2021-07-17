@@ -1,5 +1,4 @@
 ﻿using ME.Domain.Interface;
-using ME.Domain.Model.Http;
 using ME.Infrasctructure.Repository;
 using Microsoft.Extensions.Options;
 using System.Data;

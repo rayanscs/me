@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
-using AutoMapper;
-using ME.Domain.Model;
+﻿using AutoMapper;
 using ME.Application.MVVM;
+using ME.Domain.Model;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 
 namespace ME.Application

@@ -1,6 +1,4 @@
-﻿//using ME.Domain.Interface;
-using AutoMapper;
-using ME.Application.Interface;
+﻿using ME.Application.Interface;
 using ME.Application.MVVM;
 using ME.Domain.Interface;
 using Microsoft.AspNetCore.Http;

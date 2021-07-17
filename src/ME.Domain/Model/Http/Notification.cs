@@ -1,6 +1,4 @@
-﻿using ME.Domain.Interface;
-
-namespace ME.Domain.Model.Http
+﻿namespace ME.Domain.Model.Http
 {
     public sealed class Notification
     {

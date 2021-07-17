@@ -1,8 +1,7 @@
-﻿using ME.Domain.Interface;
-using ME.Domain;
+﻿using ME.Domain.Enums;
+using ME.Domain.Interface;
 using ME.Domain.Model;
 using ME.Domain.Model.Http;
-using ME.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +18,7 @@ namespace ME.Domain.Service
         public PedidoService(IPedidoRepository pedidoRepository,
                              IValidacaoService validacaoService,
                              IStatusPedidoService statusPedidoService,
-                             IUnitOfWork uow
-            )
+                             IUnitOfWork uow)
         {
             _pedidoRepository = pedidoRepository;
             _validacaoService = validacaoService;

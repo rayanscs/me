@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace ME.Application.MVVM
+﻿namespace ME.Application.MVVM
 {
     public class ItemViewModel
     {

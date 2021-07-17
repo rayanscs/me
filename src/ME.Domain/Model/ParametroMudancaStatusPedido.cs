@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ME.Domain.Model
+﻿namespace ME.Domain.Model
 {
     public class ParametroMudancaStatusPedido
     {
