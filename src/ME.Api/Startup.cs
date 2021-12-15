@@ -36,11 +36,11 @@ namespace ME.Api
                 Configuration.GetSection("ConnectionStrings").Bind(options);
             });
 
-            
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = $"{Constantes.PROJECT_NAME} API", Version = "v1" });
-            });       
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -66,7 +66,7 @@ namespace ME.Api
             });
         }
 
-        
+
 
     }
 }

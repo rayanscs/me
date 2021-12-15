@@ -20,7 +20,7 @@ namespace ME.Tests
 
             var parametroMudancaStatusPedido = PedidoFactory.CreatePedido(pedidoId, status, itensAprovados, valorAprovado);
             var retornoPedido = PedidoFactory.CreateRetornoPedido(pedidoId);
-            var calculoPersistido = PedidoFactory.CreateCalculoPersistido(pedidoId, itensAprovados, valorAprovado);    
+            var calculoPersistido = PedidoFactory.CreateCalculoPersistido(pedidoId, itensAprovados, valorAprovado);
             var statusPedidosService = new StatusPedidoService();
             #endregion
 

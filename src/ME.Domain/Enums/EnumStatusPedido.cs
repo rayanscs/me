@@ -10,7 +10,7 @@ namespace ME.Domain.Enums
         Reprovado,
         [Description("APROVADO")]
         Aprovado,
-        [Description("APROVADO_VALOR_A_MENOR")] 
+        [Description("APROVADO_VALOR_A_MENOR")]
         AprovadoValorMenor,
         [Description("APROVADO_VALOR_A_MAIOR")]
         AprovadoValorMaior,

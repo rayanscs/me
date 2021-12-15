@@ -65,8 +65,8 @@ namespace ME.Domain.Service
             return result;
         }
 
-        public RetornoMudancaStatusPedido DefineResultadoMudancaStatus(ParametroMudancaStatusPedido parametroMudancaStatusPedido, 
-                                                                       RetornoMudancaStatusPedido retornoPedido, 
+        public RetornoMudancaStatusPedido DefineResultadoMudancaStatus(ParametroMudancaStatusPedido parametroMudancaStatusPedido,
+                                                                       RetornoMudancaStatusPedido retornoPedido,
                                                                        List<Item> itensPedido)
         {
             if (!itensPedido.Any())
@@ -85,7 +85,7 @@ namespace ME.Domain.Service
                     break;
                 case EnumStatusPedido.Reprovado:
                     retornoPedido.Status.Add(EnumStatusPedido.Reprovado.GetDescription());
-                break;
+                    break;
                 default:
                     break;
             }

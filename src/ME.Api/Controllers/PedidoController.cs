@@ -15,10 +15,10 @@ namespace ME.Api.Controllers
         private IResponse _response;
         private readonly IPedidoAppService _pedidoAppService;
 
-        public PedidoController(IResponse response,                          
+        public PedidoController(IResponse response,
                                 IPedidoAppService pedidoAppService)
         {
-            _response = response;   
+            _response = response;
             _pedidoAppService = pedidoAppService;
         }
 
@@ -44,7 +44,7 @@ namespace ME.Api.Controllers
                 _response.SetMensagemPrincipal($"[ERRO][GET]");
                 _response.AddNotification($"{ex.Message}");
                 return BadRequest(_response);
-            }           
+            }
         }
 
         [HttpPost]
@@ -63,7 +63,7 @@ namespace ME.Api.Controllers
                 _response.SetMensagemPrincipal($"[ERRO][POST]");
                 _response.AddNotification($"{ex.Message}");
                 return BadRequest(_response);
-            }   
+            }
         }
 
     }

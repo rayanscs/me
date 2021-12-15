@@ -7,7 +7,7 @@ using System.Data;
 
 namespace ME.Infrasctructure.Repository
 {
-    public class PedidoRepository: IPedidoRepository
+    public class PedidoRepository : IPedidoRepository
     {
         private readonly IDbConnection _conn;
 
